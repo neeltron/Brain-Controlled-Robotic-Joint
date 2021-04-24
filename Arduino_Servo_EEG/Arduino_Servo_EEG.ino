@@ -1,3 +1,5 @@
+#include <Servo.h>
+
 #define LED 13
 #define BAUDRATE 57600
 #define DEBUGOUTPUT 0
@@ -11,9 +13,15 @@ byte attention = 0;
 byte meditation = 0;
 long lastReceivedPacket = 0;
 boolean bigPacket = false;
+
+int servoPin = 3;
+int temp = 0;
+Servo Servo1;
+
 void setup()
 {
   Serial.begin(BAUDRATE);
+  Servo1.attach(servoPin);
 }
 byte ReadOneByte()
 {
@@ -81,15 +89,21 @@ void loop()
             digitalWrite(LED, HIGH);
           else
             digitalWrite(LED, LOW);
-          Serial.print(String(attention)+" "+String(meditation));
+          Serial.print(String(attention) + " " + String(meditation));
           lastReceivedPacket = millis();
           Serial.print("\n");
+          if (attention > 50) {
+            Servo1.write(temp += 20);
+          }
+          if (temp >= 90) {
+            temp = 0;
+          }
         }
 #endif
         bigPacket = false;
       }
       else {
-        Serial.print("Checksum error!");
+
       }
     }
   }
