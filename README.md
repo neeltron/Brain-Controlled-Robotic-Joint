@@ -16,12 +16,21 @@ This repository presents a brain-controlled robotic joint, so the user can contr
 <li>A bunch of jumpers</li>
 </ul>
 
+## Connectivity
+
+Arduino -   HC05
+5V      -   VCC
+GND     -   GND
+RX0     -   TX
+
 ## Softwares Used
 
 <ul>
   <li>Arduino IDE</li>
   <li>PuTTY (Configuration)</li>
 </ul>
+
+
 
 ## Citations
 
