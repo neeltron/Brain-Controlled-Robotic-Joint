@@ -34,7 +34,9 @@ RX0     -   TX
   <li>PuTTY (Configuration)</li>
 </ul>
 
+## Installation
 
+Arduino IDE can be downloaded from <a href = "https://www.arduino.cc/en/software">here</a>. For smooth installation, you can go through <a href = "https://www.arduino.cc/en/guide/windows">this page</a>.
 
 ## Citations
 
