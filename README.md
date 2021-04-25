@@ -19,9 +19,13 @@ This repository presents a brain-controlled robotic joint, so the user can contr
 ## Connectivity
 
 Arduino -   HC05
+
 5V      -   VCC
+
 GND     -   GND
+
 RX0     -   TX
+
 
 ## Softwares Used
 
